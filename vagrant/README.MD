@@ -32,7 +32,7 @@ Vagrant使用教程
 * 替换源
     * sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak #备份
     * sudo vim /etc/apt/sources.list #修改源
-        * 将文件内容替换成[源文件内容](ubuntu/apt/sources.list)
+        * 将文件内容替换成[源文件内容](./ubuntu/apt/sources.list)
     * sudo apt-get update #更新列表
     
 * L(A|N)MP
@@ -105,9 +105,16 @@ Vagrant使用教程
             * php5-gd
         * 支持apache2的php模块
             * sudo apt-get install libapache2-mod-php5
+            * 开启rewrite功能
+                * sudo a2enmod rewrite
+
         * 支持nginx fastcgi
             * sudo apt-get install php5-cgi php5-fpm
-
+            * 修改成9000端口 ，默认sock模式
+                * cd /etc/php5/fpm/pool.d
+                * sudo vim www.conf  # search listen = 127.0.0.1:9000
+                * sudo /etc/init.d/php5-fpm restart
+            
 * 端口转发 为了验证nginx是否按照成功~~
     *  8888 端口转发到 80 
         * http://127.0.0.1:8888/
@@ -116,9 +123,53 @@ Vagrant使用教程
             
 Vagrant高级配置
 ------------------------
-* 网络设置
+* 端口转发
+    * 配置
     
-    `config.vm.network "private_network", ip: "192.168.199.01"`
+    `config.vm.network "forwarded_port", guest: 80, host: 8888 ,id: 'nginx'
+     config.vm.network "forwarded_port", guest: 8888, host: 8889 ,id: 'apache'`
+     
+    * 测试效果
+        * http://127.0.0.1:8888/
+        * http://127.0.0.1:8889/
+     
+* 网络设置
+    * 配置
+    
+        `config.vm.network "private_network", ip: "192.168.199.101"`
+    
+    * 效果
+        * http://192.168.199.101/ 或者 http://192.168.199.101:80/
+        * http://192.168.199.101:8888/
+        
+* 共享目录
+    * 配置        
+        
+        `config.vm.synced_folder "/Users/vincent/code/", "/home/www"`
+        
+框架配置
+--------------------
+* tp5
+    * git clone https://github.com/top-think/think tp5
+    * 然后切换到tp5目录下面，再克隆核心框架仓库：cd tp5 && git clone https://github.com/top-think/framework thinkphp
+    * [nginx 配置](./ubuntu/nginx/tp5.conf)
+        * 无法查看日志 sudo chmod -R 755 /var/log/nginx
+    * [apache 配置](./ubuntu/apache/tp5.conf)
+        * 无法查看日志sudo chmod -R 755 /var/log/apache2
+        * Forbidden解决办法
+            * cd /etc/apache2
+            * sudo vim apache2.conf
+
+                `<Directory />
+                         Options FollowSymLinks
+                         AllowOverride None #修改成AllowOverride ALL
+                         #Require all denied #把这行屏蔽掉，拒绝一切链接
+                 </Directory>`
+    * 测试效果
+        * http://tp5.imooc.test 或者 http://tp5.imooc.test:8888
+        * 做个测试页面 http://tp5.imooc.test/index/index/test 或者 http://tp5.imooc.test:8000/index/index/test
+        
+    
 
    
     
