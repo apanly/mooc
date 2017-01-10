@@ -43,7 +43,7 @@ Vagrant使用教程
             `nginx version: nginx/1.4.6 (Ubuntu)`
         * 测试Nginx
             * curl -I 'http://127.0.0.1'
-                
+            
                 
                 HTTP/1.1 200 OK
                 Server: nginx/1.4.6 (Ubuntu)
@@ -54,6 +54,7 @@ Vagrant使用教程
                 Connection: keep-alive
                 ETag: "5315bd25-264"
                 Accept-Ranges: bytes
+
     * Apache
         * sudo apt-get install apache2
         * apache2 -v
