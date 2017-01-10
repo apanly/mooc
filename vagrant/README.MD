@@ -45,6 +45,7 @@ Vagrant使用教程
             * curl -I 'http://127.0.0.1'
                 
                 `HTTP/1.1 200 OK
+                
                  Server: nginx/1.4.6 (Ubuntu)
                  Date: Sat, 07 Jan 2017 07:49:41 GMT
                  Content-Type: text/html
