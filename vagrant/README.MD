@@ -32,7 +32,7 @@ Vagrant使用教程
 * 替换源
     * sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak #备份
     * sudo vim /etc/apt/sources.list #修改源
-        * 将文件内容替换成[源文件内容](/ubuntu/apt/sources.list)
+        * 将文件内容替换成[源文件内容](./ubuntu/apt/sources.list)
     * sudo apt-get update #更新列表
     
 * L(A|N)MP
