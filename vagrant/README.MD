@@ -184,6 +184,23 @@ Vagrant高级配置
         * yii\web\Request::cookieValidationKey must be configured with a secret key.
             * config/web.php cookieValidationKey 赋值
         * 如果打不开 site/test ，请修改config/web.php 中urlManager 注释打开
+        
+* laravel5
+    * 下载： down.golaravel.com/laravel/laravel-v5.1.11.zip  
+    * [nginx 配置](./ubuntu/nginx/lararel5.conf)
+    * [apache 配置](./ubuntu/apache/lararel5.conf) 
+    * 测试效果
+        * http://laravel.imooc.test 或者 http://laravel.imooc.test:8888
+        
+优化
+----------------
+* 虚拟机名称
+    * vb.name = "ubuntu_mooc"
+* 虚拟机主机名
+    * config.vm.hostname = "mooc"
+* 配置虚拟机内存和CPU
+    * vb.memory = "1024"  vb.cpus = 2
+
             
     
 
