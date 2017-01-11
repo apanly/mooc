@@ -164,13 +164,27 @@ Vagrant高级配置
 
                 `<Directory />
                          Options FollowSymLinks
-                         AllowOverride None #修改成AllowOverride ALL
+                         AllowOverride None #修改成AllowOverride ALL 打开rewrite
                          #Require all denied #把这行屏蔽掉，拒绝一切链接
                  </Directory>`
     * 测试效果
         * http://tp5.imooc.test 或者 http://tp5.imooc.test:8888
         * 做个测试页面 http://tp5.imooc.test/index/index/test 或者 http://tp5.imooc.test:8000/index/index/test
         
+* yii2
+    * 下载：github.com/yiisoft/yii2/releases/download/2.0.10/yii-basic-app-2.0.10.tgz 
+    * [nginx 配置](./ubuntu/nginx/yii2.conf)
+    * [apache 配置](./ubuntu/apache/yii2.conf) 
+    * 测试效果
+            * http://yii.imooc.test 或者 http://yii.imooc.test:8888
+            * 做个测试页面 http://yii.imooc.test/site/test 或者 http://yii.imooc.test:8000/site/test
+    * 问题
+        * runtime/logs": mkdir(): Permission denied
+            * 权限不够 chmod -R 777 runtime  (如果在虚拟机不能修改文件权限，请使用nfs共享目录)
+        * yii\web\Request::cookieValidationKey must be configured with a secret key.
+            * config/web.php cookieValidationKey 赋值
+        * 如果打不开 site/test ，请修改config/web.php 中urlManager 注释打开
+            
     
 
    
