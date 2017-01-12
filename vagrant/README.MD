@@ -5,6 +5,15 @@ Vagrant使用教程
 * 博文[快速打造跨平台开发环境 vagrant + virtualbox + box](http://www.vincentguo.cn/default/26.html)
 * 有疑问可以加入QQ交流群：325264502
 
+目标
+------------------
+* 成果是打包一个box镜像
+* 这个box镜像需要运行 LAMP(Linux + Apache + Mysql + PHP ) 和 LNMP( Linux + Nginx + Mysql + PHP) 
+* 配置好3个比较流行的PHP框架运行环境
+    * Yii2
+    * Laravel5
+    * ThinkPHP5
+
 基础环境
 --------------------
 
