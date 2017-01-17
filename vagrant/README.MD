@@ -58,7 +58,9 @@ Vagrant使用教程
             * curl -I 'http://127.0.0.1'
             ```    
                 HTTP/1.1 200 OK
+                
                 Server: nginx/1.4.6 (Ubuntu)
+                
                 Date: Sat, 07 Jan 2017 07:49:41 GMT
                 Content-Type: text/html
                 Content-Length: 612
@@ -114,9 +116,12 @@ Vagrant使用教程
                 * php -v
                 ```   
                   PHP 5.5.9-1ubuntu4.20 (cli) (built: Oct  3 2016 13:00:37)
+                  
                   Copyright (c) 1997-2014 The PHP Group
+                  
                   Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
-                      with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies`
+                  
+                  with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies`
                 ``` 
         * PHP扩展
             * php5-mcrypt 
@@ -146,6 +151,7 @@ Vagrant高级配置
     * 配置
     ``` 
      config.vm.network "forwarded_port", guest: 80, host: 8888 ,id: 'nginx'
+     
      config.vm.network "forwarded_port", guest: 8888, host: 8889 ,id: 'apache'
     ``` 
      
