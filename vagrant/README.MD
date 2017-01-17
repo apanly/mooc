@@ -144,9 +144,10 @@ Vagrant高级配置
 ------------------------
 * 端口转发
     * 配置
-    
-    `config.vm.network "forwarded_port", guest: 80, host: 8888 ,id: 'nginx'
-     config.vm.network "forwarded_port", guest: 8888, host: 8889 ,id: 'apache'`
+    ``` 
+     config.vm.network "forwarded_port", guest: 80, host: 8888 ,id: 'nginx'
+     config.vm.network "forwarded_port", guest: 8888, host: 8889 ,id: 'apache'
+    ``` 
      
     * 测试效果
         * http://127.0.0.1:8888/
