@@ -200,8 +200,8 @@ Vagrant高级配置
         
 * laravel5
     * 下载： down.golaravel.com/laravel/laravel-v5.1.11.zip  
-    * [nginx 配置](./ubuntu/nginx/lararel5.conf)
-    * [apache 配置](./ubuntu/apache/lararel5.conf) 
+    * [nginx 配置](./ubuntu/nginx/laravel5.conf)
+    * [apache 配置](./ubuntu/apache/laravel5.conf) 
     * 测试效果
         * http://laravel.imooc.test 或者 http://laravel.imooc.test:8888
         
