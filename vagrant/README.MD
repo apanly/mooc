@@ -117,10 +117,10 @@ Vagrant使用教程
                 * php -v
                 ```   
                 
-                  PHP 5.5.9-1ubuntu4.20 (cli) (built: Oct  3 2016 13:00:37)
-                  Copyright (c) 1997-2014 The PHP Group
-                  Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
-                  with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies`
+                      PHP 5.5.9-1ubuntu4.20 (cli) (built: Oct  3 2016 13:00:37)
+                      Copyright (c) 1997-2014 The PHP Group
+                      Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+                      with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies
                 ``` 
         * PHP扩展
             * php5-mcrypt 
