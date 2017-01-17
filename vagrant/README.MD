@@ -150,8 +150,8 @@ Vagrant高级配置
     * 配置
     ``` 
     
-     config.vm.network "forwarded_port", guest: 80, host: 8888 ,id: 'nginx'
-     config.vm.network "forwarded_port", guest: 8888, host: 8889 ,id: 'apache'
+         config.vm.network "forwarded_port", guest: 80, host: 8888 
+         config.vm.network "forwarded_port", guest: 8888, host: 8889
     ``` 
      
     * 测试效果
