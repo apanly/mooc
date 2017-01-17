@@ -91,8 +91,8 @@ Vagrant使用教程
         * 更改端口，将端口设置为8888
             * 修改 ports.conf 文件
             * curl -I 'http://127.0.0.1:8888'
-                
-                `HTTP/1.1 200 OK
+            ```     
+                 HTTP/1.1 200 OK
                  Date: Sat, 07 Jan 2017 08:24:15 GMT
                  Server: Apache/2.4.7 (Ubuntu)
                  Last-Modified: Sat, 07 Jan 2017 07:17:45 GMT
@@ -101,6 +101,7 @@ Vagrant使用教程
                  Content-Length: 11510
                  Vary: Accept-Encoding
                  Content-Type: text/html`
+            ``` 
             
     * Mysql
         * sudo apt-get install mysql-server  #服务器端
@@ -111,11 +112,12 @@ Vagrant使用教程
         * 安装php
             * sudo apt-get install php5-cli 
                 * php -v
-                  
-                  `PHP 5.5.9-1ubuntu4.20 (cli) (built: Oct  3 2016 13:00:37)
+                ```   
+                  PHP 5.5.9-1ubuntu4.20 (cli) (built: Oct  3 2016 13:00:37)
                   Copyright (c) 1997-2014 The PHP Group
                   Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
                       with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies`
+                ``` 
         * PHP扩展
             * php5-mcrypt 
             * php5-mysql
@@ -176,12 +178,13 @@ Vagrant高级配置
         * Forbidden解决办法
             * cd /etc/apache2
             * sudo vim apache2.conf
-
-                `<Directory />
+            ``` 
+                 <Directory />
                          Options FollowSymLinks
                          AllowOverride None #修改成AllowOverride ALL 打开rewrite
                          #Require all denied #把这行屏蔽掉，拒绝一切链接
-                 </Directory>`
+                 </Directory>
+            ``` 
     * 测试效果
         * http://tp5.imooc.test 或者 http://tp5.imooc.test:8888
         * 做个测试页面 http://tp5.imooc.test/index/index/test 或者 http://tp5.imooc.test:8000/index/index/test
