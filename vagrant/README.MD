@@ -56,8 +56,7 @@ Vagrant使用教程
             `nginx version: nginx/1.4.6 (Ubuntu)`
         * 测试Nginx
             * curl -I 'http://127.0.0.1'
-            
-                
+            ```    
                 HTTP/1.1 200 OK
                 Server: nginx/1.4.6 (Ubuntu)
                 Date: Sat, 07 Jan 2017 07:49:41 GMT
@@ -67,6 +66,7 @@ Vagrant使用教程
                 Connection: keep-alive
                 ETag: "5315bd25-264"
                 Accept-Ranges: bytes
+            ```
 
     * Apache
         * sudo apt-get install apache2
@@ -76,8 +76,8 @@ Vagrant使用教程
              Server built:   Jul 15 2016 15:34:04`
         * 测试访问，此时不能访问，因为80端口被nginx占用了,可以先把nginx停掉
             * curl -I 'http://127.0.0.1'
-            
-                `HTTP/1.1 200 OK
+            ``` 
+                 HTTP/1.1 200 OK
                  Date: Sat, 07 Jan 2017 08:15:26 GMT
                  Server: Apache/2.4.7 (Ubuntu)
                  Last-Modified: Sat, 07 Jan 2017 07:17:45 GMT
@@ -86,6 +86,8 @@ Vagrant使用教程
                  Content-Length: 11510
                  Vary: Accept-Encoding
                  Content-Type: text/html`
+            ```
+             
         * 更改端口，将端口设置为8888
             * 修改 ports.conf 文件
             * curl -I 'http://127.0.0.1:8888'
@@ -212,7 +214,12 @@ Vagrant高级配置
 * 虚拟机主机名
     * config.vm.hostname = "mooc"
 * 配置虚拟机内存和CPU
-    * vb.memory = "1024"  vb.cpus = 2
+    * vb.memory = "1024"  
+    * vb.cpus = 2
+    
+打包命令
+----------------
+* vagrant package  --output  xxx.box
 
             
     
