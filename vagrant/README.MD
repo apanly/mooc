@@ -2,7 +2,7 @@ Vagrant使用教程
 ==================
 注意
 ------------------
-* 博文[快速打造跨平台开发环境 vagrant + virtualbox + box](http://www.vincentguo.cn/default/26.html)
+* 博文[快速打造跨平台开发环境 vagrant + virtualbox + box](http://www.54php.cn/default/26.html)
 * 有疑问可以加入QQ交流群：325264502
 
 目标
