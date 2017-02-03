@@ -230,6 +230,10 @@ Vagrant高级配置
 ----------------
 * vagrant package  --output  xxx.box
 
+支持一下呗
+====================
+* ![微信公众号](./images/imguowei_888.jpg)
+
             
     
 
