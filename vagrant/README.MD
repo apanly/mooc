@@ -32,7 +32,8 @@ Vagrant使用教程
 启动虚拟机
 -------------------
 * box下载
-    * ﻿链接：http://pan.baidu.com/s/1i5BfL45 密码：himr
+    * ﻿链接一：http://pan.baidu.com/s/1i5BfL45 密码：himr
+    * 链接二：https://pan.baidu.com/s/1kU8fUlD
     * 下载之后请确保文件名为ubuntu1404.box
 * 添加box
     * vagrant box add ubuntu1404 ubuntu1404.box
