@@ -27,6 +27,7 @@ Vagrant使用教程
 * Windows 额外工作
     * 可能需要配置环境变量
     * 安装Xshell命令行工具
+    * [注意，一定要开启 VT-x/AMD-V 硬件加速](https://zhidao.baidu.com/question/1383660674073569340.html)
     
     
 启动虚拟机
