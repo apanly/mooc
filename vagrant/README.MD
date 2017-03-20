@@ -232,10 +232,40 @@ Vagrant高级配置
 ----------------
 * vagrant package  --output  xxx.box
 
+
+
+windows下vagrant的注意事项（热心同学整理的）
+--------------
+* QQ:1952774133(仅供学习交流)   前提看过编程浪子的or其他的vagrant教程哦.
+* 笔者最近在使用vagrant时遇到了一些问题,当然也解决了，故把一些要注意的事情点出来,.本人使用的是windows 64位操作系统，故以此环境展开.
+
+* 必备工具:  
+    * vagrant(最新版,截止2017/3/18)
+    * virtual box(用5.1.14,截止2017/3/18的virtualbox版本有Bug,无法挂载文件)
+    * powershell(最好是大于2.0的版本)
+    * putty(windows下没有自带ssh工具,所以推荐这个小巧)
+    * box文件(ubuntu14.04版本,下载链接:https://pan.baidu.com/s/1kU8fUlD)
+
+* 常见问题:  
+    * 为啥ssh登不进linux
+    
+        这个问题首先我们需要4号工具,最好将其加入环境变量,然后直接在shell下敲入putty.  
+        在putty中hostname记住是127.0.0.1 端口是2222(虚拟机会映射到22).点击open后,会要你输入name和password,你都输入vagrant(默认的)就可以了.
+
+    * 共享目录挂载不成功  
+        
+        先执行命令 vagrant plugin install vagrant-vbguest,再看看virtualbox版本对到了2号工具否.
+        其他参考:
+        http://www.cnblogs.com/fengchi/p/6549784.html
+        http://stackoverflow.com/questions/27992354/vagrant-error-failed-to-mount-folders-in-linux-guest-after-halt-or-reload*
+
+    * 其他问题  
+        
+        目前就主要看到最多的是上面两个问题,其他的问题在你有些基础看过编程浪子的教程的情况下，都好解决.解决问题的能力也很重要
+
 支持一下呗
 ====================
 * ![微信公众号](/images/imguowei_888.jpg)
-
             
     
 
