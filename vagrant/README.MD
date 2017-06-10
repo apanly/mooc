@@ -265,7 +265,7 @@ windows下vagrant的注意事项（热心同学整理的）
 
 支持一下呗
 ====================
-* ![微信公众号](/images/imguowei_888.jpg)
+* ![微信公众号](http://cdn.static.54php.cn/images/weixin/coderonin.jpg?imageView/2/w/300)
             
     
 
